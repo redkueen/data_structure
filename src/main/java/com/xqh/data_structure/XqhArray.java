@@ -12,5 +12,12 @@ public class XqhArray {
    int  get(int index){
        return (this.array[index]);
     }
+    int i = -1;
+   void add(int element){
+       i = i + 1;
+       this.array[i] = element;
+
+
+    }
 
 }
