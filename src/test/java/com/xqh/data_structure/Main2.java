@@ -9,6 +9,9 @@ public class Main2 {
       int k = xa.get(1);
       xa.removeLast();
       xa.display();
+
+     int m = xa.indexOf(9);
+      System.out.println(m);
       int debug = 0;
     }
 }

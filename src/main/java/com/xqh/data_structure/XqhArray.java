@@ -27,5 +27,15 @@ public class XqhArray {
          n++;
         }
     }
+    int indexOf(int element){
+        int x =0;
+        while (x<= this.i) {
+            if (this.array[x] ==element){
+                return x;
+            }
+            x++;
+        }
+        return -1;
+    }
 
 }
