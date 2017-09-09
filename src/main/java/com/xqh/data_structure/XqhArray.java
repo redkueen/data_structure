@@ -16,8 +16,16 @@ public class XqhArray {
    void add(int element){
        i = i + 1;
        this.array[i] = element;
-
-
+    }
+    void removeLast(){
+       i=i-1;
+    }
+    void display() {
+        int n = 0;
+        while (n<i+1) {
+         System.out.println(this.array[n]);
+         n++;
+        }
     }
 
 }
