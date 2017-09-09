@@ -6,12 +6,17 @@ public class Main2 {
       xa.add(7);
       xa.add(9);
 
-      int k = xa.get(1);
-      xa.removeLast();
-      xa.display();
+        int k = xa.get(1);
+	    xa.removeLast();
+        xa.display();
 
-     int m = xa.indexOf(9);
-      System.out.println(m);
-      int debug = 0;
+        int m = xa.indexOf(9);
+        System.out.println(m);
+
+        xa.createReverseIndex();
+        int p1 = xa.indexOfUsingReverseIndex(7);
+        int p2 = xa.indexOfUsingReverseIndex(9);
+        System.out.println("7:" + p1 + ", 9:" + p2);
+        int debug = 0;
     }
 }

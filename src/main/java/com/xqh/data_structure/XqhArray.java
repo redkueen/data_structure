@@ -38,4 +38,19 @@ public class XqhArray {
         return -1;
     }
 
+    int[] revertArr = new int[10];
+
+    void createReverseIndex() {
+        int x = 0;
+        while (x <= i) {
+            revertArr[array[x]] = x;
+            x++;
+        }
+    }
+
+    int indexOfUsingReverseIndex(int element) {
+        int m = revertArr[element];
+        return m;
+    }
+
 }
