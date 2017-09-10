@@ -1,4 +1,7 @@
 package com.xqh.data_structure;
+
+import com.xqh.java_basic_practice.array_tool2.ArrayTool2;
+
 public class XqhArray {
     int[] array;//new的时候产生
     XqhArray(){
@@ -48,9 +51,12 @@ public class XqhArray {
         return -1;
     }
 
-    int[] revertArr = new int[100];
+    int[] revertArr;
 
     void createReverseIndex() {
+
+        revertArr = new int[ArrayTool2.findMax_finrMin(array).m_max  +1];
+
         int x = 0;
         while (x <= i) {
             revertArr[array[x]] = x;
