@@ -5,9 +5,12 @@ public class Main2 {
       xa.add(5);
       xa.add(7);
       xa.add(9);
+      xa.add(14);
+      xa.add(3);
+      xa.add(11);
 
         int k = xa.get(1);
-	    xa.removeLast();
+//	    xa.removeLast();
         xa.display();
 
         int m = xa.indexOf(9);

@@ -15,6 +15,14 @@ public class XqhArray {
     int i = -1;
    void add(int element){
        i = i + 1;
+    if(i>= array.length){
+       int[] twoArray = new int[array.length * 2];
+
+       for(int k =0;k<i;k++){
+           twoArray[k] = array[k];
+       }
+       this.array = twoArray;
+    }
        this.array[i] = element;
     }
     void removeLast(){
@@ -23,9 +31,10 @@ public class XqhArray {
     void display() {
         int n = 0;
         while (n<i+1) {
-         System.out.println(this.array[n]);
+         System.out.print(this.array[n]+" ");
          n++;
         }
+        System.out.println();
     }
     int indexOf(int element){
         int x =0;
@@ -38,7 +47,7 @@ public class XqhArray {
         return -1;
     }
 
-    int[] revertArr = new int[10];
+    int[] revertArr = new int[100];
 
     void createReverseIndex() {
         int x = 0;
