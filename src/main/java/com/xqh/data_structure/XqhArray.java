@@ -15,6 +15,7 @@ public class XqhArray {
     int i = -1;
    void add(int element){
        i = i + 1;
+//       数组扩展/扩容：扩充容量
     if(i>= array.length){
        int[] twoArray = new int[array.length * 2];
 
