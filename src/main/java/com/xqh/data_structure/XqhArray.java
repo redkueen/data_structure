@@ -9,6 +9,7 @@ public class XqhArray {
     }
 
     void set(int index,int element){
+        revertArrCreated = false;
         this.array[index]=element;
     }
 
@@ -17,6 +18,7 @@ public class XqhArray {
     }
     int i = -1;
    void add(int element){
+       revertArrCreated =false;
        i = i + 1;
 //       数组扩展/扩容：扩充容量
     if(i>= array.length){
@@ -30,6 +32,7 @@ public class XqhArray {
        this.array[i] = element;
     }
     void removeLast(){
+       revertArrCreated = false;
        i=i-1;
     }
     void display() {
@@ -52,6 +55,7 @@ public class XqhArray {
     }
 
     int[] revertArr;
+    boolean revertArrCreated ;//标志变量:反向数组已创建?
 
     void createReverseIndex() {
 
@@ -65,6 +69,11 @@ public class XqhArray {
     }
 
     int indexOfUsingReverseIndex(int element) {
+        if(revertArrCreated == false){
+
+            this.createReverseIndex();
+            revertArrCreated = true;
+        }
         int m = revertArr[element];
         return m;
     }
