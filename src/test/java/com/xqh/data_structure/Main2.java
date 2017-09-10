@@ -22,11 +22,16 @@ public class Main2 {
 
 //        xa.createReverseIndex();
         int p1 = xa.indexOfUsingReverseIndex(7);
-        xa.set(2,25);
+        xa.set(2,18);
         int p2 = xa.indexOfUsingReverseIndex(9);
         xa.removeLast();
-      int p3 = xa.indexOfUsingReverseIndex(25);
+      int p3 = xa.indexOfUsingReverseIndex(18);
         System.out.println("7:" + p1 + ", 9:" + p2 + ", 25:" + p3);
+       int length = xa.length();
+       int size = xa.size();
+       int capacity = xa.capacity();
+       xa.delete(2);
+      int p4 = xa.indexOfUsingReverseIndex(25);
         int debug = 0;
     }
 }

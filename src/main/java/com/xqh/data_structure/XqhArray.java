@@ -77,5 +77,22 @@ public class XqhArray {
         int m = revertArr[element];
         return m;
     }
-
+    int length(){
+        int length = i + 1;
+        return length;
+    }
+    int size(){
+        int size=i+1;
+        return size;
+    }
+    int capacity(){
+        return array.length;
+    }
+    void delete(int index){
+        this.revertArrCreated = false;
+        for(int k = index;k <this.i;k++){
+            array[k] = array[k +1];
+        }
+        this.i = this.i - 1;
+    }
 }
