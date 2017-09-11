@@ -21,15 +21,29 @@ public class XqhArray {
        revertArrCreated =false;
        i = i + 1;
 //       数组扩展/扩容：扩充容量
-    if(i>= array.length){
-       int[] twoArray = new int[array.length * 2];
-
-       for(int k =0;k<i;k++){
-           twoArray[k] = array[k];
+//    if(i>= array.length){
+//       int[] twoArray = new int[array.length * 2];
+//
+//       for(int k =0;k<i;k++){
+//           twoArray[k] = array[k];
+//       }
+//       this.array = twoArray;
+//    }
+       if(i>=array.length){
+           this.addCapacity();
        }
-       this.array = twoArray;
-    }
        this.array[i] = element;
+    }
+    public void addCapacity(){
+        if(i>= array.length){
+            int[] twoArray = new int[array.length * 2];
+
+            for(int k =0;k<i;k++){
+                twoArray[k] = array[k];
+            }
+            this.array = twoArray;
+        }
+
     }
    public void removeLast(){
        revertArrCreated = false;
@@ -95,4 +109,14 @@ public class XqhArray {
         }
         this.i = this.i - 1;
     }
+    public void insert(int index,int element) {
+        if (i == array.length-1) {
+            this.addCapacity();
+        }
+            for (int k = array.length - 1; k > array.length - index - 1; k--) {
+                array[k] = array[k - 1];
+            }
+            array[index] = element;
+            this.i = this.i + 1;
+        }
 }

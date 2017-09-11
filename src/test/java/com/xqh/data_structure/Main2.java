@@ -34,7 +34,10 @@ public class Main2 {
        int size = xa.size();
        int capacity = xa.capacity();
        xa.delete(2);
-      int p4 = xa.indexOfUsingReverseIndex(25);
+//      int p4 = xa.indexOfUsingReverseIndex(25);
+      xa.display();
+      xa.insert(3,16);
+      xa.display();
         int debug = 0;
     }
 }
