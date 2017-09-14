@@ -20,7 +20,7 @@ public class XqhLinkedListMain {
        lit.removeLast();
        lit.removeLast();
        lit.display();
-       lit.delete(7);
+       lit.delete(2);
        lit.display();
     }
 }

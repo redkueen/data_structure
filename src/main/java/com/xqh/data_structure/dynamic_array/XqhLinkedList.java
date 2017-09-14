@@ -26,6 +26,8 @@ public class XqhLinkedList {
             System.out.print(k + "," + i.data0 + "     ");
             i = i.next0;
         }
+        k++;
+        System.out.println(k + "," + i.data0 + "     ");
     }
     public void insert(int index,int element){
         Node i = head;
@@ -35,7 +37,7 @@ public class XqhLinkedList {
             iprevious = i;
             i = i.next0;
             k = k + 1;
-            if (k == index){
+            if (k == index - 1){
                 Node node = new Node();
                 node.data0 = element;
                 node.next0 = i ;
@@ -84,7 +86,8 @@ public class XqhLinkedList {
         while (i.next0 != null){
             iprevious = i ;
             i = i.next0;
-            if (k == index){
+            k++;
+            if (k == index - 1){
                 iprevious.next0 = i.next0;
             }
         }
