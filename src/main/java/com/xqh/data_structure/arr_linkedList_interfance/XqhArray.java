@@ -86,7 +86,7 @@ public class XqhArray implements XqhList{
         if (i == array.length-1) {
             this.addCapacity();
         }
-        for (int k = array.length - 1; k > array.length - index - 1; k--) {
+        for (int k = array.length - 1; k >= index + 1/*k > index*/; k--) {
             array[k] = array[k - 1];
         }
         array[index] = element;
