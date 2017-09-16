@@ -1,6 +1,6 @@
-package com.xqh.data_structure;
+package com.xqh.data_structure.linked_list;
 
-import com.xqh.data_structure.dynamic_array.XqhLinkedList;
+import com.xqh.data_structure.linked_list.XqhLinkedList;
 
 public class XqhLinkedListMain {
     public static void main(String[]args){

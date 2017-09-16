@@ -1,4 +1,4 @@
-package com.xqh.data_structure.dynamic_array;
+package com.xqh.data_structure.linked_list;
 
 public class Node {
     int data0;

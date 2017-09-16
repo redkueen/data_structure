@@ -1,4 +1,4 @@
-package com.xqh.data_structure;
+package com.xqh.data_structure.dynamic_array;
 
 import com.xqh.data_structure.dynamic_array.XqhArray;
 

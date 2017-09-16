@@ -1,4 +1,6 @@
-package com.xqh.data_structure.dynamic_array;
+package com.xqh.data_structure.linked_list;
+
+import com.xqh.data_structure.linked_list.Node;
 
 public class XqhLinkedList {
     Node head =null;
