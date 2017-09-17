@@ -2,21 +2,21 @@ package com.xqh.data_structure.arr_linkedList_interfance;
 
 import com.xqh.java_basic_practice.array_tool2.ArrayTool2;
 
-public class XqhArray implements XqhList{
-    private int[] array;//new的时候产生
+public class XqhArray <ElementType>{
+    private ElementType[] array;//new的时候产生
     public XqhArray(){
-        this.array = new int[5];
+        this.array = (ElementType[]) new Object[5];
     }
 
-    public void set(int index,int element){
+    public void set(int index,ElementType element){
         this.array[index]=element;
     }
 
-    public int  get(int index){
+    public ElementType  get(int index){
         return (this.array[index]);
     }
     private int i = -1;
-    public void add(int element){
+    public void add(ElementType element){
         i = i + 1;
 //       数组扩展/扩容：扩充容量
 //    if(i>= array.length){
@@ -34,7 +34,7 @@ public class XqhArray implements XqhList{
     }
     public void addCapacity(){
         if(i>= array.length){
-            int[] twoArray = new int[array.length * 2];
+            ElementType[] twoArray = (ElementType[]) new Object[array.length * 2];
 
             for(int k =0;k<i;k++){
                 twoArray[k] = array[k];
@@ -54,7 +54,7 @@ public class XqhArray implements XqhList{
         }
         System.out.println();
     }
-    public int indexOf(int element){
+    public int indexOf(ElementType element){
         int x =0;
         while (x<= this.i) {
             if (this.array[x] ==element){
@@ -82,7 +82,7 @@ public class XqhArray implements XqhList{
         }
         this.i = this.i - 1;
     }
-    public void insert(int index,int element) {
+    public void insert(int index,ElementType element) {
         if (i == array.length-1) {
             this.addCapacity();
         }

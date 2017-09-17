@@ -1,16 +1,16 @@
 package com.xqh.data_structure.arr_linkedList_interfance;
 
-public class XqhLinkedList implements XqhList {
-    Node head =null;
-    public void addFirst(int element){
-        Node node = new Node();
+public class XqhLinkedList <ElemrntType> {
+    Node<ElemrntType> head =null;
+    public void addFirst(ElemrntType element){
+        Node<ElemrntType> node = new Node<ElemrntType>();
         node.data0 =element;
         node.next0 =head;
         head = node;
     }
-    public void add(int element){
-        Node node = new Node();
-        Node i = head;
+    public void add(ElemrntType element){
+        Node<ElemrntType> node = new Node<ElemrntType>();
+        Node<ElemrntType> i = head;
         while (i.next0 != null){
             i=i.next0;
         }
@@ -19,7 +19,7 @@ public class XqhLinkedList implements XqhList {
         node.next0 = null;
     }
     public void display(){
-        Node i = head;
+        Node<ElemrntType> i = head;
         int k = -1;
         while (i.next0 != null){
             k = k + 1;
@@ -29,25 +29,25 @@ public class XqhLinkedList implements XqhList {
         k++;
         System.out.println(k + "," + i.data0 + "     ");
     }
-    public void insert(int index,int element){
-        Node i = head;
+    public void insert(int index,ElemrntType element){
+        Node<ElemrntType> i = head;
         int k = - 1;
-        Node iprevious;
+        Node<ElemrntType> iprevious;
         while (i.next0 != null){
             iprevious = i;
             i = i.next0;
             k = k + 1;
             if (k == index - 1){
-                Node node = new Node();
+                Node<ElemrntType> node = new Node<ElemrntType>();
                 node.data0 = element;
                 node.next0 = i ;
                 iprevious.next0 = node;
             }
         }
     }
-    public void set(int index , int element){
-        Node i = head;
-        Node iprevious ;
+    public void set(int index , ElemrntType element){
+        Node<ElemrntType> i = head;
+        Node<ElemrntType> iprevious ;
         int k = -1 ;
         while (i.next0 != null){
             iprevious = i;
@@ -58,21 +58,21 @@ public class XqhLinkedList implements XqhList {
             }
         }
     }
-    public int get(int index){
-        Node i = head;
+    public ElemrntType get(int index){
+        Node<ElemrntType> i = head;
         int k = -1;
         while (i.next0 != null){
             i = i.next0;
             k = k + 1;
             if (k == index){
-                return i.data0;
+                return (ElemrntType) i.data0;
             }
         }
-        return -1;
+        return null;
     }
     public void removeLast(){
-        Node i = head;
-        Node iprevious = null;
+        Node<ElemrntType> i = head;
+        Node<ElemrntType> iprevious = null;
         while (i.next0 != null){
             iprevious = i ;
             i = i.next0;
@@ -80,8 +80,8 @@ public class XqhLinkedList implements XqhList {
         iprevious .next0 = null;
     }
     public void delete (int index){
-        Node i = head;
-        Node iprevious;
+        Node<ElemrntType> i = head;
+        Node<ElemrntType> iprevious;
         int k = -1;
         while (i.next0 != null){
             iprevious = i ;
